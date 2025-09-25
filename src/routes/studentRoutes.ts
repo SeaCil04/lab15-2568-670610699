@@ -1,15 +1,9 @@
 import { Router, type Request, type Response } from "express";
 import { zStudentId } from "../schemas/studentValidator.js";
 import { courses, students } from "../db/db.js";
-<<<<<<< HEAD
 const router2 = Router();
 
 router2.get("/students/:studentId/courses", (req: Request, res: Response) => {
-=======
-const router = Router();
-
-router.get("/students/:studentId/courses", (req: Request, res: Response) => {
->>>>>>> 55609e74b849f746c950620a483d99c7761b5851
   try {
     const studentId = req.params.studentId;
     const result = zStudentId.safeParse(studentId);

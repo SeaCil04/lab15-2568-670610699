@@ -7,17 +7,10 @@ import {
     zCoursePutBody
 } from "../schemas/courseValidator.js"
 import { type Course } from "../libs/types.js";
-<<<<<<< HEAD
 const router1: Router = Router();
 
 // READ all
 router1.get("/courses", (req: Request, res : Response) => {
-=======
-const router: Router = Router();
-
-// READ all
-router.get("/courses", (req: Request, res : Response) => {
->>>>>>> 55609e74b849f746c950620a483d99c7761b5851
     try{
         return res.status(200).json(courses);
     }catch(error){
@@ -30,11 +23,7 @@ router.get("/courses", (req: Request, res : Response) => {
 });
 
 // Params URL 
-<<<<<<< HEAD
 router1.get("/", (req: Request, res : Response) => {
-=======
-router.get("/", (req: Request, res : Response) => {
->>>>>>> 55609e74b849f746c950620a483d99c7761b5851
     try{
         const CourseId = Number(req.params.courseId);
         const result = zCourseId.safeParse(CourseId);
@@ -72,11 +61,7 @@ router.get("/", (req: Request, res : Response) => {
     }
 });
 
-<<<<<<< HEAD
 router1.post("/courses", (req: Request,res : Response) => {
-=======
-router.post("/courses", (req: Request,res : Response) => {
->>>>>>> 55609e74b849f746c950620a483d99c7761b5851
     try{
         const body = req.body as Course;
         const result = zCoursePostBody.safeParse(body);
@@ -110,11 +95,7 @@ router.post("/courses", (req: Request,res : Response) => {
     }
 });
 
-<<<<<<< HEAD
 router1.put("/courses", (req: Request,res: Response) => {
-=======
-router.put("/courses", (req: Request,res: Response) => {
->>>>>>> 55609e74b849f746c950620a483d99c7761b5851
     try{
         const body = req.body as Course;
         const result = zCoursePutBody.safeParse(body);
@@ -149,11 +130,7 @@ router.put("/courses", (req: Request,res: Response) => {
     }
 });
 
-<<<<<<< HEAD
 router1.delete("/courses", (req: Request, res: Response) => {
-=======
-router.delete("/courses", (req: Request, res: Response) => {
->>>>>>> 55609e74b849f746c950620a483d99c7761b5851
   try {
     const body = req.body;
 
