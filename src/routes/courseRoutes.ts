@@ -84,7 +84,7 @@ router1.post("/courses", (req: Request, res: Response) => {
     return res.status(201).json({
       success: true,
       message: `Course ${body.courseId} has been added successfully`,
-      data: { body },
+      data: body 
     });
   } catch (error) {
     return res.json({
